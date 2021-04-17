@@ -47,13 +47,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <tr>
             <td>
                 <form name="createuser" method="post" action="<?php echo basename(__FILE__);?>"> <!-- Changed "_FILE_" -->
-                    <input type="text" name="Name" placeholder="Enter user name">
+                    <input type="text" name="name" placeholder="Driver name">
                     <br>
-                    <input type="email" name="Email" placeholder="Enter email address">
+                    <input type="tel" name="cell" placeholder="Contact number">
                     <br>
-                    <input type="password" name="Password" placeholder="Enter password">
+                    <input type="email" name="email" placeholder="Email address">
                     <br>
-                    <input type="password" name="Confirm" placeholder="Confirm password">
+                    <input type="password" name="password" placeholder="Enter password">
+                    <br>
+                    <input type="password" name="confirm" placeholder="Confirm password">
                     <br>
                     <input name="submitbtn" type="submit" id="C2" value="OK" onclick="return checkpassword(this.form)"> 
                     <script src="../scripts/scripts.js"></script>
