@@ -1,0 +1,2 @@
+[08-Nov-2017 19:44:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/lsdccoza/public_html/portal/login.php on line 19
+[08-Nov-2017 19:49:49 UTC] PHP Fatal error:  Call to a member function query() on null in /home/lsdccoza/public_html/portal/login.php on line 19

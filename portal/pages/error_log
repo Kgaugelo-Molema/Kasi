@@ -1,0 +1,2 @@
+[09-Nov-2017 09:56:06 UTC] PHP Fatal error:  Call to a member function query() on null in /home/lsdccoza/public_html/portal/pages/studentsassessmentmarks.php on line 25
+[18-Nov-2017 21:21:58 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/lsdccoza/public_html/portal/pages/wzregisterpersonaldetails.php on line 181
