@@ -7,8 +7,8 @@ const DB_USER = "lsdccoza_admin"; // set database user
 const DB_PASS = "lsdcadmin123"; // set database password
 const DB_NAME = "lsdccoza_lsdcdb"; // set database name
 $connection = new mysqli(DB_HOST,DB_USER,DB_PASS); 
-if ($connection->connect_error) {die ("DB connection failed<br>".$connection->error);}
-if (!$connection->select_db(DB_NAME)) {die ("lsdcdb selection failed<br>".$connection->error);}
+//if ($connection->connect_error) {die ("DB connection failed<br>".$connection->error);}
+//if (!$connection->select_db(DB_NAME)) {die ("lsdcdb selection failed<br>".$connection->error);}
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $mysql_table = "members";
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" type="image/png" href="../images/favicon.png">
 </head>
 <body>
-    <a href="../">Back</a>
+    <a href="../../">Back</a>
     <table>
         <tr>
             <td>

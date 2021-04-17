@@ -9,7 +9,7 @@ const DB_NAME = "lsdccoza_lsdcdb"; // set database name
 $connection = new mysqli(DB_HOST,DB_USER,DB_PASS); 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if (!$connection->select_db(DB_NAME)) {die ("lsdcdb selection failed<br>".$connection->error);}
+//if (!$connection->select_db(DB_NAME)) {die ("lsdcdb selection failed<br>".$connection->error);}
 
 
 if ((isset($_GET['doLogoff'])) &&($_GET['doLogoff']=="true")) {
@@ -48,13 +48,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width">
-<title>LSDC Login</title>
+<title>Kasi Limo</title>
 <link href="styles/loginstyles.css" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 	<form name="frmregister"action="<?= $_SERVER['PHP_SELF'] ?>" method="post" >
 		<table class="form">
+			<tr>
+				<td>
+					<img src="images/KasiLimoLogo.png" />
+				</td>
+			</tr>
 			<tr>
 				<td style="color:red;">
 				<?php echo $msg; ?></td>
