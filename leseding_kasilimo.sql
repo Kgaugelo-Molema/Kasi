@@ -242,6 +242,17 @@ CREATE TABLE IF NOT EXISTS `members` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `vehicle`;
+CREATE TABLE IF NOT EXISTS `vehicle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `model` varchar(256) NOT NULL,
+  `make` varchar(256) DEFAULT NULL,
+  `year` int(4) NOT NULL,
+  `color` varchar(256) NOT NULL,
+  `registration` varchar(256) NOT NULL,
+  `Timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+
 --
 -- Dumping data for table `members`
 --

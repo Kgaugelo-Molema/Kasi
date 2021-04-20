@@ -14,17 +14,17 @@ $connection = new mysqli(DB_HOST,DB_USER,DB_PASS);*/
 $mysql_table = "members";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST["Name"];
-    $sqltext = "SELECT * FROM members WHERE name = '$name' "; 
+    $sqltext = "SELECT * FROM $mysql_table WHERE name = '$name' "; 
     $result = $connection->query($sqltext);
     if (!$connection->query($sqltext)) {
         echo "$sqltext";
-        die("Error: Failed to return data from table members " . $connection->error . "<br>");
+        die("Error: Failed to return data from table $mysql_table " . $connection->error . "<br>");
     }
     if ($result->num_rows > 0) {
         echo 'User name already exists.';
     }
     else {
-        $sqltext = "INSERT INTO members (name, email, password, privileges) VALUES "; 
+        $sqltext = "INSERT INTO $mysql_table (name, email, password, privileges) VALUES "; 
         $inputvalues = "'" . $_POST["Name"] . "','" . $_POST["Email"] . "','" . md5($_POST["Password"]) . "', 2"; 
         $sqltext = "$sqltext ($inputvalues)"; 
 
@@ -32,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "$sqltext<br>";
             die("Error: Failed to insert data into table '$mysql_table' " . $connection->error . "<br>"); //Modify
         }
-        echo 'User created successfully. <a href="../login.php">Click here</a> to login.<br>';
+        // echo 'User created successfully. <a href="../login.php">Click here</a> to login.<br>';
+        header('Location: editvehicle.php');
     }
 }
 ?>
